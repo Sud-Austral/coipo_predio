@@ -1,47 +1,50 @@
-# SAFF - Buscador Predial v0.1.0
+# SAFF Búsqueda Predial v0.5.0
 
-Primera vista funcional para consultar información desde `mi_base.duckdb`.
+Versión preparada para **GitHub Pages + GitHub Actions**.
 
-## Arquitectura
+## Qué publica GitHub Pages
 
-- Frontend: React + Vite
-- Backend local: Node.js + Express
-- Base de datos: DuckDB en modo solo lectura
-- Comunicación: REST JSON
+GitHub Pages no ejecuta DuckDB ni Node. Por eso esta versión usa un dataset estático:
 
-## Modos de búsqueda
+`frontend/public/demo-data.json`
 
-1. Solicitud
-   - Busca por `SOLI_NUMERO` o `SOLI_NUMERO_DISP`
-   - Devuelve año, tipo, estado, predio(s), superficie y propietario(s)
+El dataset incluido contiene **solo casos geográficos que pueden renderizarse sin inventar coordenadas**.
 
-2. Predio
-   - Busca por código, nombre o rol
-   - Devuelve ficha del predio y todas las solicitudes asociadas
+Con el informe suministrado se pudo publicar de forma autocontenida:
 
-3. Propietario
-   - Busca por RUT, nombre o apellido
-   - Devuelve propietario, predios y solicitudes asociadas
+- Predio `22088`
+- `HIJUELA Nº 3 -FDO. CRUCERO-LAS MINAS`
+- Localidad: `PURRANQUE`
+- 60 registros de rodal, 52 vigentes
+- 4 puntos SAFF explícitos en el informe
+- capa de predio disponible
+- capa de rodales preparada, pero **sin polígono de rodal**, porque todavía no existe una relación cartográfica validada
 
-## Puesta en marcha
+El informe indica además 20 candidatos con suficientes conteos de coordenadas, pero para 19 de ellos el TXT no trae los vértices completos; no se inventaron datos.
 
-### Backend
+## GitHub Pages
+
+El workflow ya viene incluido:
+
+`.github/workflows/deploy-pages.yml`
+
+1. Sube todo el contenido del ZIP a la raíz del repositorio.
+2. Haz commit/push a `main` o `master`.
+3. En GitHub entra a **Settings > Pages**.
+4. En **Build and deployment > Source**, selecciona **GitHub Actions**.
+5. Abre la pestaña **Actions** y espera `Deploy GitHub Pages`.
+
+El workflow ejecuta:
 
 ```bash
-cd backend
-npm install
-copy .env.example .env
-npm run dev
+cd frontend
+npm ci
+npm run build
 ```
 
-Edita `.env` para apuntar a tu archivo:
+y publica `frontend/dist`.
 
-```env
-DUCKDB_PATH=C:\Users\tu_usuario\ruta\mi_base.duckdb
-PORT=3001
-```
-
-### Frontend
+## Probar localmente la demo Pages
 
 ```bash
 cd frontend
@@ -49,20 +52,81 @@ npm install
 npm run dev
 ```
 
-Abre la URL indicada por Vite, normalmente `http://localhost:5173`.
+No configures `VITE_API_URL` si quieres probar exactamente el modo GitHub Pages.
 
-## Importante
+## Usar las DuckDB localmente
 
-Las relaciones SQL de esta v0.1.0 se basan en la estructura detectada:
+Conserva el backend de la v0.4.0.
 
-- `SOLICITUD.SOLI_NUMERO`
-- `PREDIOSOLICITUD.SOLI_NUMERO`
-- `PREDIOSOLICITUD.PRED_CODIGO`
-- `PREDIO.PRED_CODIGO`
-- `PROPIETARIO.SOLI_NUMERO`
-- `PROPIETARIO.PERS_CODIGO`
-- `PERSONA.PERS_CODIGO`
-- `PREDIO.LOCA_CODIGO`
-- `LOCALIDAD.LOCA_CODIGO`
+`backend/.env`:
 
-Antes de cerrar el modelo definitivo conviene validar cardinalidades con datos reales.
+```env
+SAFF_DB_PATH=C:\ruta\mi_base.duckdb
+SIGCRA_DB_PATH=C:\ruta\sigcra.duckdb
+PORT=3001
+```
+
+Para que el frontend use la API local crea `frontend/.env`:
+
+```env
+VITE_API_URL=http://localhost:3001
+```
+
+Luego:
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+y en otra consola:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Generar un dataset Pages más completo
+
+Se incluye:
+
+`tools/exportar_demo_pages.py`
+
+Este script consulta tus dos DuckDB y escribe automáticamente `frontend/public/demo-data.json`, restringido a predios que:
+
+- estén asociados a solicitudes;
+- tengan rodales SAFF;
+- tengan al menos 3 puntos lat/lon válidos en SIGCRA.
+
+Ejemplo:
+
+```bash
+pip install -r tools/requirements.txt
+python tools/exportar_demo_pages.py "C:\ruta\mi_base.duckdb" "C:\ruta\sigcra.duckdb" --limit 10
+```
+
+Después haces commit del JSON generado y GitHub Actions vuelve a publicar la demo.
+
+## Capas del mapa
+
+Fondos:
+- Mapa base
+- Relieve
+- Satélite
+
+Overlays:
+- Predio: polígono clickeable cuando existe geometría.
+- Rodales: listado clickeable y arquitectura GeoJSON preparada.
+- Los límites de rodal no se fabrican: se dibujarán solo cuando encontremos una relación geográfica validada.
+
+## Seguridad de datos
+
+No se incluyen:
+- `mi_base.duckdb`
+- `sigcra.duckdb`
+- archivos `.env`
+- datos masivos de SAFF
+
+GitHub contiene solo código y el conjunto acotado de datos de demostración.

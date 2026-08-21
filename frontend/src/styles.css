@@ -82,4 +82,96 @@ td{padding:11px 10px;border-top:1px solid #edf0ee;vertical-align:top}
   .mode{white-space:nowrap}.searchBox{align-items:stretch}.searchBox button{padding:10px}
   .metricsGrid{grid-template-columns:repeat(2,1fr)}
   .twoCols{grid-template-columns:1fr}.predioGrid{grid-template-columns:1fr}
+}.visualBlock{margin:14px 0 22px}.mapPanel{border:1px solid #dfe7e1;border-radius:14px;overflow:hidden;background:#fff}.leafletMap{height:390px;width:100%;z-index:1}.mapMeta{display:flex;flex-wrap:wrap;gap:14px;padding:9px 12px;border-top:1px solid #e7ece8;font-size:11px;color:#657169;background:#fbfcfb}.mapMeta span{display:flex;align-items:center;gap:5px}.mapEmpty{min-height:180px;border:1px dashed #ccd6cf;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#79847c;background:#fbfcfb;text-align:center;padding:18px}.mapEmpty strong{color:#4f5e54}.mapEmpty span{font-size:12px}.subdivisionStrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.subdivisionStrip>span{background:#f3f6f4;border:1px solid #e1e7e3;border-radius:999px;padding:7px 10px;font-size:11px;color:#5d6961}.subdivisionStrip .note{border-style:dashed;background:#fff}.predioResult{border-top:1px solid #e5ebe7;padding-top:18px;margin-top:18px}.predioResult:first-of-type{border-top:0;padding-top:0}.predioHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.predioHead h3{font-size:16px;margin:0 0 3px}.sourceChip{font-size:10px;font-weight:800;letter-spacing:.04em;background:#edf5ef;color:#2d6540;padding:6px 8px;border-radius:999px;white-space:nowrap}
+@media(max-width:800px){.leafletMap{height:300px}.predioHead{flex-direction:column}.mapMeta{gap:8px}}
+
+
+/* Vista Calidad y confianza de datos */
+.mainNav{display:flex;align-items:center;gap:6px;margin-left:auto;margin-right:18px}
+.navButton{border:0;background:transparent;color:#66736a;border-radius:9px;padding:8px 10px;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;font-weight:700}
+.navButton:hover{background:#f2f5f3}
+.navButton.active{background:#e9f2ec;color:#235d39}
+.qualityPage{display:flex;flex-direction:column;gap:18px}
+.qualityHeader{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:8px 0 6px}
+.qualityHeader h1{font-size:30px;letter-spacing:-.03em;margin:6px 0 5px}
+.qualityHeader p{margin:0;color:#69756d}
+.refreshButton{border:1px solid #d8e2db;background:#fff;color:#365743;border-radius:10px;padding:10px 13px;display:flex;align-items:center;gap:7px;cursor:pointer;font-weight:700;font-size:12px}
+.refreshButton:disabled{opacity:.6}
+.spin{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.qualityMetrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.qualityMetric{background:#fff;border:1px solid #dde5df;border-radius:14px;padding:16px}
+.qualityMetricTop{display:flex;align-items:center;gap:8px;color:#6e7a72;font-size:10px;text-transform:uppercase;letter-spacing:.055em}
+.qualityMetricIcon{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:#edf4ef;color:#2e6742}
+.qualityMetricValue{font-size:26px;font-weight:800;letter-spacing:-.035em;margin-top:14px}
+.qualityMetricDetail{font-size:11px;color:#77827a;margin-top:3px}
+.qualityGrid{display:grid;grid-template-columns:1.35fr 1fr;gap:12px}
+.qualityCard,.qualityTableCard{background:#fff;border:1px solid #dde5df;border-radius:14px;padding:18px}
+.qualityCardTitle{display:flex;align-items:flex-start;gap:9px;margin-bottom:18px;color:#365543}
+.qualityCardTitle strong,.qualityCardTitle span{display:block}
+.qualityCardTitle strong{font-size:14px}
+.qualityCardTitle span{font-size:11px;color:#7a857d;margin-top:2px}
+.coverageRows{display:flex;flex-direction:column;gap:14px}
+.coverageRow{display:grid;grid-template-columns:150px 1fr 112px;align-items:center;gap:12px}
+.coverageLabel{display:flex;align-items:center;gap:8px;font-size:12px;color:#4e5b52}
+.coverageDot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#6e9b78}
+.coverageDot.saff{background:#79939f}.coverageDot.sigcra{background:#a98d68}.coverageDot.none{background:#9d9d9d}
+.coverageTrack{height:10px;border-radius:999px;background:#eef1ef;overflow:hidden}
+.coverageFill{display:block;height:100%;border-radius:999px;background:#4e855e}
+.coverageFill.saff{background:#78909c}.coverageFill.sigcra{background:#aa8e68}.coverageFill.none{background:#a6aaa7}
+.coverageNumbers{display:flex;align-items:baseline;justify-content:space-between;gap:7px;font-size:11px}
+.coverageNumbers strong{font-size:12px}.coverageNumbers span{color:#738078}
+.sourceConfidence{display:flex;flex-direction:column;gap:10px}
+.sourceLine{border:1px solid #e2e8e4;border-radius:11px;padding:12px;display:grid;grid-template-columns:1fr auto;gap:4px 10px}
+.sourceLine span{font-weight:700;font-size:12px}.sourceLine strong{font-size:12px;color:#315c40}.sourceLine small{grid-column:1/-1;color:#77827a}
+.qualityCallout{margin-top:14px;background:#eef5f0;border-radius:11px;padding:13px;color:#315b40}
+.qualityCallout strong,.qualityCallout span{display:block}.qualityCallout strong{font-size:13px}.qualityCallout span{font-size:11px;margin-top:4px;color:#5d6d62}
+.qualityTableCard{padding-bottom:12px}
+.qualityUpdated{text-align:right;font-size:10px;color:#89928c;margin-top:9px}
+@media(max-width:980px){
+  .mainNav{order:3;width:100%;margin:0;padding:0 16px 10px;overflow:auto}
+  .topbar{height:auto;min-height:72px;flex-wrap:wrap;padding:12px 16px 0}
+  .qualityMetrics{grid-template-columns:repeat(2,1fr)}
+  .qualityGrid{grid-template-columns:1fr}
 }
+@media(max-width:620px){
+  .qualityHeader{align-items:flex-start;flex-direction:column}.qualityMetrics{grid-template-columns:1fr 1fr}
+  .coverageRow{grid-template-columns:1fr 72px}.coverageTrack{grid-column:1/-1;grid-row:2}.coverageNumbers{justify-content:flex-end}
+  .qualityHeader h1{font-size:25px}.navButton{white-space:nowrap}
+}
+
+
+/* v0.3.0 · Ficha de solicitud y expediente */
+.solicitudFicha{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:14px;margin-bottom:18px}
+.fichaMain,.expedientePanel{border:1px solid #dce5df;border-radius:16px;background:#fff;padding:18px}
+.fichaMain h2{font-size:27px;margin:5px 0 18px;letter-spacing:-.025em}
+.fichaRows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.fichaRows>div{display:grid;grid-template-columns:135px minmax(0,1fr);align-items:center;min-height:46px;border-top:1px solid #edf1ee;gap:10px}
+.fichaRows span:first-child{font-size:11px;color:#77837a;text-transform:uppercase;letter-spacing:.04em}
+.fichaRows strong{font-size:13px;color:#293a30;overflow-wrap:anywhere}
+.typePill{display:inline-flex!important;width:max-content;max-width:100%;background:#eaf3ec;color:#2e6841!important;border-radius:999px;padding:6px 10px}
+.expedientePanel{background:#f8faf8}
+.expedienteTitle{display:flex;gap:9px;align-items:flex-start;color:#355e42;margin-bottom:13px}
+.expedienteTitle strong,.expedienteTitle span{display:block}.expedienteTitle strong{font-size:14px}.expedienteTitle span{font-size:10px;color:#78827b;margin-top:2px}
+.expedienteGroups{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.expedienteGroup{background:#fff;border:1px solid #e2e8e4;border-radius:10px;padding:10px;min-width:0}
+.expedienteGroup>div{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.expedienteGroup strong{font-size:11px}.expedienteGroup span{font-size:10px;color:#748078;white-space:nowrap}
+.expedienteGroup ul{list-style:none;padding:7px 0 0;margin:0;border-top:1px solid #eef1ef;margin-top:7px}.expedienteGroup li{font-size:9px;padding:2px 0;display:flex;justify-content:space-between;gap:6px;color:#5e6a62;overflow-wrap:anywhere}.expedienteGroup small{display:block;font-size:9px;color:#929992;margin-top:7px}
+@media(max-width:900px){.solicitudFicha{grid-template-columns:1fr}.fichaRows{grid-template-columns:1fr}}
+@media(max-width:540px){.expedienteGroups{grid-template-columns:1fr}.fichaRows>div{grid-template-columns:112px minmax(0,1fr)}}
+
+/* Ejemplos reales de búsqueda */
+.searchExamples{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:9px;font-size:11px;color:#77827a}
+.searchExamples>span{font-weight:700;color:#647068}
+.searchExamples button{border:1px solid #dce5df;background:#fff;color:#3c5f48;border-radius:999px;padding:6px 9px;font-size:10px;cursor:pointer;max-width:330px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.searchExamples button:hover{background:#edf5ef;border-color:#cbdccf}
+
+
+/* v0.4.0 · Capas de mapa Predio / Rodales + Relieve */
+.mapPopup{display:flex;flex-direction:column;gap:3px;min-width:150px}.mapPopup strong{font-size:13px}.mapPopup span{font-size:11px;color:#59655d}
+.rodalGeoNotice{display:flex;gap:9px;align-items:flex-start;background:#f6f4ed;border:1px solid #e7e0ca;border-radius:10px;padding:10px 12px;margin-top:8px;color:#6c5b2e}.rodalGeoNotice strong,.rodalGeoNotice span{display:block}.rodalGeoNotice strong{font-size:11px}.rodalGeoNotice span{font-size:10px;color:#7d7152;margin-top:2px}
+.subdivisionArea{display:flex;flex-direction:column;gap:9px}.rodalLayerBrowser{border:1px solid #dce5df;border-radius:12px;padding:12px;background:#fbfcfb}.rodalBrowserHead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:9px}.rodalBrowserHead strong,.rodalBrowserHead span{display:block}.rodalBrowserHead strong{font-size:12px;color:#355c42}.rodalBrowserHead span{font-size:10px;color:#7a857d;margin-top:2px}.rodalBrowserHead small{font-size:9px;color:#8b7b4c;background:#f5f0df;padding:5px 7px;border-radius:999px;white-space:nowrap}.rodalChips{display:flex;gap:6px;flex-wrap:wrap}.rodalChip{border:1px solid #d8e2db;background:#fff;color:#45604d;border-radius:999px;padding:6px 9px;font-size:10px;cursor:pointer}.rodalChip:hover{background:#f0f5f1}.rodalChip.active{background:#315f40;color:#fff;border-color:#315f40}.rodalDetail{margin-top:10px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #e5ebe7;padding-top:10px;gap:8px}.rodalDetail>div{min-width:0}.rodalDetail span,.rodalDetail strong{display:block}.rodalDetail span{font-size:9px;color:#7d877f;text-transform:uppercase;letter-spacing:.04em}.rodalDetail strong{font-size:11px;color:#293a30;margin-top:2px;overflow-wrap:anywhere}.rodalMore{font-size:9px;color:#818b84;margin-top:7px}
+.leaflet-control-layers-expanded{min-width:190px}.leaflet-control-layers-base label,.leaflet-control-layers-overlays label{font-size:12px}
+@media(max-width:700px){.rodalBrowserHead{flex-direction:column}.rodalDetail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.searchExamples em{font-style:normal;color:#8a7260;font-size:10px}

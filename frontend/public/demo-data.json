@@ -1,0 +1,669 @@
+{
+  "meta": {
+    "version": "0.5.0",
+    "generatedFrom": "candidatos_predio_con_rodales_mapa.txt",
+    "filter": "Solo registros con geometría estática renderizable a partir del extracto suministrado.",
+    "note": "No se inventan geometrías de rodal. Los rodales se listan como atributos hasta encontrar una fuente cartográfica validada.",
+    "coordinateNormalization": "SAFF UTM normalizado a WGS84 para demo; predio 22088/Purranque tratado como EPSG:32718."
+  },
+  "predios": [
+    {
+      "PRED_CODIGO": 22088,
+      "PRED_NOMBRE": "HIJUELA Nº 3 -FDO. CRUCERO-LAS MINAS",
+      "PRED_SUPERFICIE": 300.0,
+      "LOCALIDAD": "PURRANQUE",
+      "ROLES": null,
+      "SOLICITUDES_PM": 4,
+      "geo": {
+        "available": true,
+        "source": "SAFF (extracto de prueba)",
+        "pointCount": 4,
+        "center": [
+          -40.911715179606496,
+          -73.42656097566552
+        ],
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "role": "predio",
+              "label": "Perímetro experimental desde puntos SAFF",
+              "orderingMethod": "nearest_neighbor",
+              "crossings": 0,
+              "sourceNote": "Puntos explícitos del informe de candidatos"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    -73.44286018630035,
+                    -40.91715754088245
+                  ],
+                  [
+                    -73.44049679111205,
+                    -40.911612766643
+                  ],
+                  [
+                    -73.41369154207764,
+                    -40.90887800617074
+                  ],
+                  [
+                    -73.40919538317203,
+                    -40.9092124047298
+                  ],
+                  [
+                    -73.44286018630035,
+                    -40.91715754088245
+                  ]
+                ]
+              ]
+            }
+          }
+        ],
+        "points": [
+          {
+            "ref": "ACCESO AL PREDIO",
+            "este": 633975,
+            "norte": 5470103,
+            "tipo": 1,
+            "uso": 18,
+            "orden": 1,
+            "lon": -73.40919538317203,
+            "lat": -40.9092124047298
+          },
+          {
+            "ref": "VERTICE DE CERCO EN PARTE NORTE DEL RODAL R1",
+            "este": 631334,
+            "norte": 5469884,
+            "tipo": 2,
+            "uso": 18,
+            "orden": 3,
+            "lon": -73.44049679111205,
+            "lat": -40.911612766643
+          },
+          {
+            "ref": "acceso rodal",
+            "este": 631124,
+            "norte": 5469272,
+            "tipo": 3,
+            "uso": 18,
+            "orden": 4,
+            "lon": -73.44286018630035,
+            "lat": -40.91715754088245
+          },
+          {
+            "ref": "CONSTRUCCIÓN",
+            "este": 633597,
+            "norte": 5470147,
+            "tipo": 4,
+            "uso": 18,
+            "orden": 2,
+            "lon": -73.41369154207764,
+            "lat": -40.90887800617074
+          }
+        ]
+      },
+      "subdivisiones": {
+        "sectores": [],
+        "rodales": [
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "1",
+            "RODA_CODIGO": 36428585,
+            "RODA_SUPERFICIE": 6.07,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "2",
+            "RODA_CODIGO": 6948734,
+            "RODA_SUPERFICIE": 4.9,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "3",
+            "RODA_CODIGO": 728942,
+            "RODA_SUPERFICIE": 7.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "4",
+            "RODA_CODIGO": 728945,
+            "RODA_SUPERFICIE": 3.1,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "5",
+            "RODA_CODIGO": 728948,
+            "RODA_SUPERFICIE": 1.2,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "6",
+            "RODA_CODIGO": 728951,
+            "RODA_SUPERFICIE": 4.4,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "7",
+            "RODA_CODIGO": 600845,
+            "RODA_SUPERFICIE": 3.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "8",
+            "RODA_CODIGO": 600847,
+            "RODA_SUPERFICIE": 3.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "9",
+            "RODA_CODIGO": 2853703,
+            "RODA_SUPERFICIE": 12.49,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "10",
+            "RODA_CODIGO": 2853704,
+            "RODA_SUPERFICIE": 13.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "11",
+            "RODA_CODIGO": 2853705,
+            "RODA_SUPERFICIE": 1.22,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "12",
+            "RODA_CODIGO": 21460416,
+            "RODA_SUPERFICIE": 5.3,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "13",
+            "RODA_CODIGO": 6948030,
+            "RODA_SUPERFICIE": 2.81,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "14",
+            "RODA_CODIGO": 6948125,
+            "RODA_SUPERFICIE": 3.62,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "15",
+            "RODA_CODIGO": 6948176,
+            "RODA_SUPERFICIE": 0.34,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "16",
+            "RODA_CODIGO": 6948205,
+            "RODA_SUPERFICIE": 4.01,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "17",
+            "RODA_CODIGO": 6948663,
+            "RODA_SUPERFICIE": 0.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "18",
+            "RODA_CODIGO": 6948696,
+            "RODA_SUPERFICIE": 0.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "19",
+            "RODA_CODIGO": 6948709,
+            "RODA_SUPERFICIE": 0.6,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "20",
+            "RODA_CODIGO": 6948711,
+            "RODA_SUPERFICIE": 2.3,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "21",
+            "RODA_CODIGO": 6948733,
+            "RODA_SUPERFICIE": 1.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "22",
+            "RODA_CODIGO": 6948735,
+            "RODA_SUPERFICIE": 14.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "23",
+            "RODA_CODIGO": 6948742,
+            "RODA_SUPERFICIE": 1.2,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "24",
+            "RODA_CODIGO": 6948746,
+            "RODA_SUPERFICIE": 0.7,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "25",
+            "RODA_CODIGO": 6948861,
+            "RODA_SUPERFICIE": 5.4,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "26",
+            "RODA_CODIGO": 60468412,
+            "RODA_SUPERFICIE": 1.11,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "27",
+            "RODA_CODIGO": 6948865,
+            "RODA_SUPERFICIE": 1.3,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "28",
+            "RODA_CODIGO": 6948867,
+            "RODA_SUPERFICIE": 2.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "29",
+            "RODA_CODIGO": 6948869,
+            "RODA_SUPERFICIE": 0.8,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "30",
+            "RODA_CODIGO": 6948871,
+            "RODA_SUPERFICIE": 2.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "31",
+            "RODA_CODIGO": 6948872,
+            "RODA_SUPERFICIE": 1.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "32",
+            "RODA_CODIGO": 6948880,
+            "RODA_SUPERFICIE": 0.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "33",
+            "RODA_CODIGO": 6948895,
+            "RODA_SUPERFICIE": 1.8,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "34",
+            "RODA_CODIGO": 6948904,
+            "RODA_SUPERFICIE": 2.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "35",
+            "RODA_CODIGO": 6948929,
+            "RODA_SUPERFICIE": 0.6,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "36",
+            "RODA_CODIGO": 6948999,
+            "RODA_SUPERFICIE": 0.8,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "37",
+            "RODA_CODIGO": 6949009,
+            "RODA_SUPERFICIE": 0.8,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "38",
+            "RODA_CODIGO": 6949016,
+            "RODA_SUPERFICIE": 1.6,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "39",
+            "RODA_CODIGO": 6949018,
+            "RODA_SUPERFICIE": 1.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "40",
+            "RODA_CODIGO": 6949019,
+            "RODA_SUPERFICIE": 0.5,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "41",
+            "RODA_CODIGO": 6949020,
+            "RODA_SUPERFICIE": 5.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "42",
+            "RODA_CODIGO": 6949021,
+            "RODA_SUPERFICIE": 2.1,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "43",
+            "RODA_CODIGO": 6949024,
+            "RODA_SUPERFICIE": 1.9,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "44",
+            "RODA_CODIGO": 36137636,
+            "RODA_SUPERFICIE": 7.36,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "45",
+            "RODA_CODIGO": 29869050,
+            "RODA_SUPERFICIE": 3.0,
+            "RODA_ANO_PLANTACION": 2006,
+            "SECT_CODIGO": 7273947,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "46",
+            "RODA_CODIGO": 36137635,
+            "RODA_SUPERFICIE": 0.83,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "47",
+            "RODA_CODIGO": 36428539,
+            "RODA_SUPERFICIE": 1.3,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "48",
+            "RODA_CODIGO": 36428550,
+            "RODA_SUPERFICIE": 0.22,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "49",
+            "RODA_CODIGO": 36428584,
+            "RODA_SUPERFICIE": 0.53,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "50",
+            "RODA_CODIGO": 80720242,
+            "RODA_SUPERFICIE": 1.47,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "51",
+            "RODA_CODIGO": 80720241,
+            "RODA_SUPERFICIE": 3.82,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "52",
+            "RODA_CODIGO": 165512051,
+            "RODA_SUPERFICIE": 39.79,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 1
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "1",
+            "RODA_CODIGO": 728936,
+            "RODA_SUPERFICIE": 8.12,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "1",
+            "RODA_CODIGO": 36428540,
+            "RODA_SUPERFICIE": 6.82,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "1",
+            "RODA_CODIGO": 36428551,
+            "RODA_SUPERFICIE": 6.6,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "2",
+            "RODA_CODIGO": 728939,
+            "RODA_SUPERFICIE": 6.0,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "12",
+            "RODA_CODIGO": 2853706,
+            "RODA_SUPERFICIE": 13.49,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "26",
+            "RODA_CODIGO": 6948864,
+            "RODA_SUPERFICIE": 6.4,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "44",
+            "RODA_CODIGO": 21460415,
+            "RODA_SUPERFICIE": 8.19,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          },
+          {
+            "PRED_CODIGO": 22088,
+            "RODA_NUMERO": "50",
+            "RODA_CODIGO": 60468410,
+            "RODA_SUPERFICIE": 5.29,
+            "RODA_ANO_PLANTACION": null,
+            "SECT_CODIGO": null,
+            "RODA_VIGENTE": 0
+          }
+        ],
+        "areas": []
+      },
+      "rodalGeo": {
+        "available": false,
+        "source": null,
+        "reason": "Sin relación geográfica de rodal validada",
+        "features": []
+      }
+    }
+  ],
+  "solicitudes": [],
+  "propietarios": [],
+  "quality": {
+    "candidateCount": 1,
+    "withPredioMap": 1,
+    "withRodalMap": 0,
+    "withBoth": 0
+  }
+}
