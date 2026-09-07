@@ -1,0 +1,113 @@
+archivos:
+
+  - ruta: frontend/public/demo-data.json
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] no leido por el analizador. El script que lo produce [tools/exportar_demo_pages.py] extrae de bases reales, y el modelo de origen incluye entidades propietario y persona [backend/VALIDAR_RELACIONES.sql:17], [backend/VALIDAR_RELACIONES.sql:19]; la interfaz tiene un componente dedicado a presentar identificadores de persona [frontend/src/App.jsx]. Patron esperado: RUT y nombre de propietario, mas coordenadas de predio. Conteo no disponible. El archivo no vive en tests/, fixtures/ ni mocks/: vive en el directorio publico del frontend."
+    puede_versionarse: "[VERIFICAR] hoy esta versionado en un repositorio publico. Si contiene_pii se confirma, esta ruta tendria que estar en .gitignore anclada con barra inicial, y no lo esta. Es un hallazgo, no una correccion: este documento no edita .gitignore."
+    uso: unica fuente de datos del modo de demostracion del cliente [frontend/src/api.js:9]
+
+  - ruta: tools/exportar_demo_pages.py
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] es codigo; patron posible: rutas a las bases de origen escritas en el archivo; conteo no disponible"
+    puede_versionarse: true
+    uso: produce el conjunto estatico a partir de las bases de origen
+
+  - ruta: backend/VALIDAR_RELACIONES.sql
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] es una consulta, no datos; patron posible: identificadores concretos escritos como ejemplo dentro de la consulta; conteo no disponible"
+    puede_versionarse: true
+    uso: comprueba que las relaciones entre solicitud, predio, propietario y persona cierren
+
+  - ruta: backend/.env.example
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] es un ejemplo de configuracion; patron esperado: nombres de variable y rutas de archivo, no personas; conteo no disponible"
+    puede_versionarse: true
+    uso: plantilla de las variables que el servidor espera [backend/server.js:9], [backend/server.js:10], [backend/server.js:11]
+
+  - ruta: frontend/.env.example
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] es un ejemplo de configuracion; patron esperado: nombres de variable; conteo no disponible"
+    puede_versionarse: true
+    uso: plantilla de la direccion de la API que el cliente espera [frontend/src/api.js:1]
+
+  - ruta: backend/package.json
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: manifiesto de dependencias y comandos del servidor
+
+  - ruta: backend/package-lock.json
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: fija las versiones exactas instaladas en el servidor
+
+  - ruta: frontend/package.json
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: manifiesto de dependencias y comandos del cliente
+
+  - ruta: frontend/package-lock.json
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: fija las versiones exactas instaladas en el cliente
+
+  - ruta: tools/requirements.txt
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: manifiesto de dependencias del script de exportacion
+
+  - ruta: frontend/vite.config.js
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: configura el empaquetado del cliente
+
+  - ruta: .github/workflows/deploy-pages.yml
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: nombres de repositorio y de entorno; conteo no disponible"
+    puede_versionarse: true
+    uso: construye y publica el cliente
+
+  - ruta: iniciar_backend.bat
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron posible: rutas locales de una maquina concreta; conteo no disponible"
+    puede_versionarse: true
+    uso: arranca el servidor en un equipo local
+
+  - ruta: iniciar_frontend.bat
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron posible: rutas locales de una maquina concreta; conteo no disponible"
+    puede_versionarse: true
+    uso: arranca el cliente en un equipo local
+
+  - ruta: .gitignore
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] patron esperado: ninguno; conteo no disponible"
+    puede_versionarse: true
+    uso: se incluye porque de el depende si el conjunto estatico esta o no excluido del control de versiones; el analizador no leyo su contenido
+
+notas:
+  - "Ningun sha256 de esta lista fue calculado aqui: los calcula el script de sellado."
+  - "El analizador no abrio el contenido de ningun archivo de esta lista. Los campos contiene_pii declaran el patron esperado y dejan el conteo sin responder; no contienen ningun valor."
+  - "[PENDIENTE] Falta declarar el origen de los quince archivos de este manifiesto. Ninguno lo trae escrito."
+  - "[VERIFICAR] Las dos bases de origen que el servidor lee [backend/server.js:10], [backend/server.js:11] no estan en el repositorio y por lo tanto no pueden sellarse aqui. Son el insumo principal del sistema y nadie ha declarado quien las entrega, con que frecuencia, ni bajo que autorizacion se consultan."
+  - "[VERIFICAR] Este repositorio es publico. La primera entrada de este manifiesto describe un conjunto de datos derivado de registros reales y versionado en el directorio publico del cliente. Es el punto que hay que resolver antes que cualquier otro."
